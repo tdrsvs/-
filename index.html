@@ -1,647 +1,410 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>تصويت لنجم الشهر</title>
-  </head>
-  <body>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  افلام سبايدر  مان   </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  font-family: "Rubik", sans-serif;
-  background-color: #000;
-  color: #fff;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ccc;
-}
-
-ul {
-  list-style-type: none;
-}
-
-img {
-  width: 100%;
-}
-
-h3 {
-  font-size: 26px;
-  font-weight: 300;
-}
-
-h4 {
-  color: #00ed82;
-  font-size: 13px;
-  text-transform: uppercase;
-}
-
-.btn {
-  display: inline-block;
-  background: #fff;
-  color: #333;
-  min-width: 135px;
-  padding: 20px 32px;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 14px;
-  border: none;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.btn-cta:hover {
-  opacity: 0.8;
-}
-
-.btn-outline {
-  background: none;
-  color: #fff;
-  border: 2px solid #fff;
-}
-
-.btn-outline:hover {
-  color: #fff;
-  border-color: #ccc;
-}
-
-.btn-dark {
-  color: #fff;
-  background-color: #000;
-}
-
-.legal-text {
-  font-size: 10px;
-  color: #ccc;
-  margin-top: 20px;
-}
-
-.sub-link {
-  display: block;
-  color: #ccc;
-  font-size: 12px;
-  margin-top: 5px;
-  text-decoration: underline;
-}
-
-.text-xl {
-  font-size: 70px;
-  font-weight: bold;
-}
-
-.sub-text {
-  max-width: 850px;
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-
-/* Header */
-
-.header {
-  height: 530px;
-  background: url(https://s01.babup.com/uploads/Picsart-24-07-29-22-01-40-573.jpg)
-    no-repeat center center / cover;
-}
-
-.header nav {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px 40px;
-  z-index: 2;
-  position: relative;
-}
-
-.header nav .login-btn {
-  cursor: pointer;
-  background: none;
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.header .header-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.header .logo {
-  width: 270px;
-  margin: 20px 0;
-}
-
-.header .header-text-1 {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.header .header-text-2 {
-  font-size: 18px;
-  margin: 25px 0;
-}
-
-.header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 180px;
-  z-index: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.76) 15.54%,
-    rgba(0, 0, 0, 0.192) 60.23%,
-    rgba(0, 0, 0, 8e-5) 100%
-  );
-}
-
-/* Sub Header */
-
-.sub-header {
-  display: grid;
-  grid-template-columns: 2fr 4fr 2fr;
-  gap: 40px;
-  align-items: center;
-  padding: 30px 40px;
-  background: linear-gradient(
-    318.68deg,
-    #0f495c 0%,
-    #0d3640 49.72%,
-    #08141f 100%
-  );
-}
-
-.sub-header > div:last-of-type {
-  justify-self: end;
-  align-self: end;
-}
-
-.sub-header > div:last-of-type .sub-link {
-  text-align: center;
-}
-
-/* Categories */
-
-.categories {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 90px 40px;
-}
-
-.categories .covers {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.categories .covers > div {
-  height: 500px;
-  width: 300px;
-  position: relative;
-}
-
-.categories .cover-grad {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-      156.82deg,
-      rgba(0, 0, 0, 0.6) 4.58%,
-      rgba(0, 0, 0, 0) 69.61%
-    ),
-    linear-gradient(24.5deg, rgba(0, 0, 0, 0.2) 4.71%, rgba(0, 0, 0, 0) 71.49%);
-}
-
-.categories .cover-text {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  text-align: left;
-}
-
-.categories .cover-1 {
-  background: url("https://s01.babup.com/uploads/bcc9fd02e415c1f759e272161dd5dd67.jpg")
-    no-repeat center center / cover;
-}
-.categories .cover-2 {
-
-  background: url("https://s01.babup.com/uploads/Picsart-24-05-25-22-51-48-563_0e8bc.jpg")
-    no-repeat center center / cover;
-}
-.categories .cover-3 {
-  background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-3.jpg?raw=true")
-    no-repeat center center / cover;
-}
-.categories .cover-4 {
-  background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/cover-4.jpg?raw=true")
-    no-repeat center center / cover;
-}
-
-/* Live */
-
-.live {
-  background-color: #151516;
-  padding: 40px;
-}
-
-.live-border {
-  border: 4px solid #1ce783;
-  border-radius: 16px;
-  padding: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.live a {
-  text-transform: uppercase;
-  font-size: 18px;
-  margin-top: 20px;
-  text-decoration: underline;
-}
-
-/* Live Sports */
-
-.live-sports {
-  background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/live-sports.jpg?raw=true")
-    no-repeat center center / cover;
-  height: 800px;
-  position: relative;
-}
-
-.live-sports-content {
-  position: absolute;
-  top: 160px;
-  left: 100px;
-  max-width: 550px;
-}
-
-.live-sports-logos {
-  width: 300px;
-  margin-top: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.live-sports-logos > div {
-  background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/network-logo-bg.png?raw=true")
-    no-repeat center center / cover;
-  height: 60px;
-  width: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.live-sports-logos img {
-  width: 40px;
-}
-
-/* Footer */
-
-.footer {
-  background: #ebedf2;
-  color: #333;
-}
-
-.footer a {
-  color: #333;
-}
-
-.footer-container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px;
-}
-
-.footer-lists {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footer-lists .list-head {
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.divider {
-  width: 100%;
-  height: 3px;
-  border-top: 1px solid #ccc;
-  margin: 30px 0;
-}
-
-.social-icons img {
-  width: 25px;
-  height: 25px;
-  margin-right: 25px;
-}
-
-/* Modal */
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.modal-box {
-  margin: 10% auto;
-  width: 400px;
-  background-color: #fff;
-  color: #333;
-  position: relative;
-  animation: modalopen 1s;
-}
-
-@keyframes modalopen {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.modal-body {
-  padding: 50px;
-}
-
-.modal-body h3 {
-  font-weight: bold;
-}
-
-.modal-body .btn {
-  width: 100%;
-  margin-top: 30px;
-}
-
-.modal .close {
-  cursor: pointer;
-  height: 23px;
-  width: 23px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-
-.modal .modal-footer {
-  background-color: #f7f7f9;
-  color: #333;
-  padding: 20px 0;
-  border-top: 1px solid #eee;
-  text-align: center;
-}
-
-.modal a {
-  color: steelblue;
-}
-
-/* Form */
-
-.form-control {
-  margin: 20px 0;
-}
-
-.form-control label {
-  display: block;
-  text-transform: uppercase;
-}
-
-.form-control input {
-  width: 100%;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  height: 50px;
-  padding: 5px;
-}
-
-/* Media Queries */
-
-@media (max-width: 1300px) {
-  .categories .covers {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 1100px) {
-  .categories .covers {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .header .logo {
-    width: 200px;
-  }
-
-  .header .header-content {
-    text-align: center;
-    padding: 0 20px;
-  }
-
-  .header .header-text-1 {
-    margin-bottom: 40px;
-  }
-
-  .header .header-text-2 {
-    display: none;
-  }
-
-  .sub-header {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .sub-header img {
-    width: 250px;
-    margin: auto;
-  }
-
-  .sub-header > div:last-of-type {
-    justify-self: center;
-    align-self: center;
-  }
-
-  .text-xl {
-    font-size: 40px;
-    line-height: 1.3;
-  }
-
-  .sub-text {
-    font-size: 20px;
-  }
-
-  .categories .covers {
-    grid-template-columns: 1fr;
-  }
-
-  .live-border {
-    padding: 30px 10px;
-  }
-
-  .live-sports {
-    background: url("https://github.com/bradtraversy/hulu-webpage-clone/blob/main/img/live-sports-small.jpg?raw=true")
-      no-repeat center center / cover;
-  }
-
-  .live-sports-content {
-    top: 30px;
-    left: 30px;
-    margin-top: 60px;
-  }
-
-  .footer-lists {
-    flex-direction: column;
-  }
-
-  .footer-lists .list-head {
-    margin-top: 10px;
-  }
-
-  .modal .modal-box {
-    width: 350px;
-  }
-}
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #000010;
+            color: white;
+            overflow: auto;
+        }
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000010;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .loader {
+            border: 10px solid #fff;
+            border-top: 10px solid #e6b800;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .content {
+    display: block; /* تأكد من عرض المحتوى بشكل صحيح */
+    height: auto; /* السماح للتمرير للأسفل */
+    overflow: auto; /* السماح بالتمرير في القسم */
+}
+
+.video-player {
+    width: 100vw;
+    height: 56vw;
+    position: relative; /* لجعل المشغل غير مثبت */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+        .pin-indicator {
+            position: absolute;
+            top: -3px;
+            right: -5px;
+            width: 150px;
+            height: 150px;
+        }
+        .video-info {
+            padding: 10px;
+            margin-top: 5px; /* مسافة طبيعية بين قسم العنوان وقسم القناة */
+        }
+        .video-title {
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #e6e6e6;
+            transition: color 0.3s ease;
+        }
+        .video-title:hover {
+            color: #e6b800;
+        }
+        .video-description {
+            display: none;
+            font-size: 14px;
+            color: #ddd;
+            margin: 5px 0;
+        }
+        .video-year {
+            font-size: 12px;
+            color: #909090;
+            margin-top: 5px;
+        }
+        .channel-info {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-top: -13px; /* تقليل المسافة إلى -5 */
+            
+        }
+        .channel-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .channel-info .channel-name {
+            font-size: 16px;
+            color: #e6e6e6;
+            font-weight: bold;
+        }
+        .suggested-videos {
+            margin-top: 10px; /* مسافة طبيعية بين العنوان وقسم المقترحات */
+            padding-left: 10px;
+            max-height: 400px;
+            overflow-y: auto; /* السماح بالتمرير */
+            display: flex;
+            flex-direction: column;
+        }
+        .suggested-video {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+        .suggested-video:hover {
+            background-color: #000010;
+            border-radius: 8px;
+        }
+        .suggested-video img {
+            width: 120px;
+            height: 67px;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        .suggested-video .details .title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #e6e6e6;
+        }
+        .suggested-video .details .channel {
+            font-size: 12px;
+            color: #909090;
+        }
+        .suggested-video .details .year {
+            font-size: 12px;
+            color: #909090;
+        }
+        /* نافذة الاختيار */
+        .quality-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 10000;
+            color: white;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .quality-popup h3 {
+            margin: 0 0 10px;
+        }
+        .quality-option {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .quality-option:hover {
+            background-color: #e6b800;
+        }
+        /* خيارات التحكم */
+        .controls-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 10000;
+            color: white;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        .controls-popup h3 {
+            margin: 0 0 10px;
+        }
+        .control-option {
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .control-option:hover {
+            background-color: #e6b800;
+        }
     </style>
-    <header class="header">
-      <nav>
-        <ul>
-          <li>
-          </li>
-        </ul>
-      </nav>
-      <div class="header-content">
-        <h4>تصويت الى نجوم الشهر الذين سيحتلون التطبيق لشهر كامل </h4>
-        <img
-          src="https://s01.babup.com/uploads/Picsart-24-06-19-05-30-56-678.png"
-          alt="No content found there is no Internet "
-          class="logo"
-        />
-        <div class="header-text-1">صوت الآن الى شخصيتك المفضلة</div>
-           <a href="https://www.socialcreator.com/stellarspotlight"
-       <button class="btn btn-cta">بدء التصويت</button> </a>
-        <div class="legal-text">
-       يرجى كتابة اسم الشخصية بشكل واضح ولأي مسلسل تنتمي مع تفاصيل اخرى
-        </div>
-      </div>
-    </header>
- 
-    <section class="categories">
-      <h4>Most voted </h4>
-      <div class="text-xl">الأكثر تصويت</div>
+</head>
+<body>
+
+<div class="loader-wrapper" id="loader-wrapper">
+    <div class="loader"></div>
+</div>
+
+<div class="content">
+    <div class="video-player" id="main-video">
+        <video id="video" controls>
+            <source src="https://firebasestorage.googleapis.com/v0/b/videos-code.appspot.com/o/lv_0_%D9%A2%D9%A0%D9%A2%D9%A4%D9%A1%D9%A0%D9%A0%D9%A5%D9%A0%D9%A1%D9%A0%D9%A5%D9%A0%D9%A8.mp4?alt=media&token=db101f45-279a-4dd3-b59e-96540ca31bca" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
    
-      <div class="covers">
-        <div class="cover-1">
-          <a href="#" target="_blank" class="cover-1">
-          <div class="cover-grad"></div>
-          <div class="cover-text">
-            <div class="sub-title">من سلسلة بن 10</div>
-            <h3>بن تينيسون</h3>
-          </div>
-          </a>
+    </div>
+
+    <div class="video-info">
+        <div class="video-title" onclick="toggleDescription()"> Spider Man movies       </div>
+        <div class="video-year" id="fixed-year"> سلسلة الأفلام هذه تحتوي على مشاهد غير مناسبة للأعمار القاصرة </div>
+        <div class="video-description">
+    	
+    سبايدر مان هو بطل خارق مشهور يتميز بقدرته على تسلق الجدران وإطلاق الشبكات بعد أن تعرّض للدغة عنكبوت مشعّ. تحكي السلسلة عن بيتر باركر، الطالب الذي يستخدم قواه لمواجهة الأشرار وحماية نيويورك، بينما يحاول التوازن بين حياته الشخصية ومهامه البطولية.
+
+
+    	 
+    		  </div>
+    </div>
+
+    <div class="channel-info">
+        <img src="https://www.babup.com/do.php?img=93513" alt="Channel Logo">
+        <div class="channel-name">Fans Home</div>
+    </div>
+
+    <hr style="border: 1px solid #fff; margin: 10px 0;">
+
+    <div class="suggested-videos">
+        <h3>| Start watching</h3>
+      
+        <div class="suggested-video" onclick="showQualityOptions('https://pullzonetaher.b-cdn.net/Movies/Spider-Man%202002/Spider-Man%202002%20720p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/Spider-Man%202002/Spider-Man%202002%201080p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/Spider-Man%202002/Spider-Man%202002%20480p.mp4', 'سبايدر مان الجزء الأول')">
+            <img src="https://s01.babup.com/uploads/22VX5pm4KRuiGbG3mS5Rn3.jpg" alt="Thumbnail">
+            <div class="details">
+                <div class="title"> Spider Man  2002  </div>
+                <div class="channel">مترجم  بالعربي</div>
+                <div class="year">|  الجزء الأول</div>
+            </div>
         </div>
-             <div class="covers">
-        <div class="cover-2">
-          <a href="#" target="_blank" class="cover-1">
-          <div class="cover-grad"></div>
-          <div class="cover-text">
-            <div class="sub-title"> من سلسلة بن 10  </div>
-            <h3>الجد ماكس</h3>
-          </div>
-          </a>
+       
+ <div class="suggested-video" onclick="showQualityOptions('https://pullzonetaher.b-cdn.net/Movies/Spider-Man%202%202004/Spider-Man%202%202004%20720p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/Spider-Man%202%202004/Spider-Man%202%202004%201080p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/Spider-Man%202%202004/Spider-Man%202%202004%20480p.mp4', 'سبايدر مان الجزء الثاني')">
+            <img src="https://s01.babup.com/uploads/spidey-2-6.jpeg" alt="Thumbnail">
+            <div class="details">
+                <div class="title"> Spider Man  2004  </div>
+                <div class="channel">مترجم  بالعربي</div>
+                <div class="year">|  الجزء الثاني</div>
+            </div>
         </div>
-     
-   
-      </div>
-    </section>
- 
+
+ <div class="suggested-video" onclick="showQualityOptions('https://pullzonetaher.b-cdn.net/Movies/Spider-Man%203%202007/Spider-Man%203%202007%20720p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/Spider-Man%203%202007/Spider-Man%203%202007%201080p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/Spider-Man%203%202007/Spider-Man%203%202007%20480p.mp4', 'سبايدر مان الجزء الثالث')">
+            <img src="https://s01.babup.com/uploads/40b58883-9934-44a5-b099-fde518403ac1-snapshot-1590664574-width936-quality90.jpeg" alt="Thumbnail">
+            <div class="details">
+                <div class="title"> Spider Man  2007  </div>
+                <div class="channel">مترجم  بالعربي</div>
+                <div class="year">|  الجزء الثالث</div>
+            </div>
+        </div>
+
+
+
+
+
+ <div class="suggested-video" onclick="showQualityOptions('https://pullzonetaher.b-cdn.net/Movies/The%20Amazing%20Spider-Man%202012/The%20Amazing%20Spider-Man%202012%20720p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/The%20Amazing%20Spider-Man%202012/The%20Amazing%20Spider-Man%202012%201080p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/The%20Amazing%20Spider-Man%202012/The%20Amazing%20Spider-Man%202012%20480p.mp4', 'سبايدر مان الرائع الجزء الأول')">
+            <img src="https://s01.babup.com/uploads/MV5BMjIxNDc5MDM4Ml5BMl5BanBnXkFtZTcwNTM3OTMwOA-V1-.jpg" alt="Thumbnail">
+            <div class="details">
+                <div class="title"> The Amazing Spider-Man  2012  </div>
+                <div class="channel">مترجم  بالعربي</div>
+                <div class="year">|  الجزء الأول</div>
+            </div>
+        </div>
+
+
+
+ <div class="suggested-video" onclick="showQualityOptions('https://pullzonetaher.b-cdn.net/Movies/The%20Amazing%20Spider-Man%202%202014/The%20Amazing%20Spider-Man%202%202014%20720p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/The%20Amazing%20Spider-Man%202%202014/The%20Amazing%20Spider-Man%202%202014%201080p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/The%20Amazing%20Spider-Man%202%202014/The%20Amazing%20Spider-Man%202%202014%20480p.mp4', 'سبايدر مان الرائع الجزء الثاني')">
+            <img src="https://s01.babup.com/uploads/the-amazing-spiderman-2-2014-poster.jpg" alt="Thumbnail">
+            <div class="details">
+                <div class="title"> The Amazing Spider-Man  2014  </div>
+                <div class="channel">مترجم  بالعربي</div>
+                <div class="year">|  الجزء الثاني</div>
+            </div>
+        </div>
+
+
+
+ <div class="suggested-video" onclick="showQualityOptions('https://pullzonetaher.b-cdn.net/Movies/Spider-Man%20Homecoming%202017/Spider-Man%20Homecoming%202017%20720p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/Spider-Man%20Homecoming%202017/Spider-Man%20Homecoming%202017%201080p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/Spider-Man%20Homecoming%202017/Spider-Man%20Homecoming%202017%20720p.mp4', 'سبايدر مان نسخة جديدة الجزء الأول')">
+            <img src="https://s01.babup.com/uploads/spiderman-homecoming-keyart.jpg" alt="Thumbnail">
+            <div class="details">
+                <div class="title"> Spider Man Homecoming  2017  </div>
+                <div class="channel">مترجم  بالعربي</div>
+                <div class="year">|  الجزء الأول</div>
+            </div>
+        </div>
+
+ <div class="suggested-video" onclick="showQualityOptions('https://pullzonetaher.b-cdn.net/Movies/Spider-Man%20Far%20from%20Home%202019/Spider-Man%20Far%20from%20Home%202019%20720p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/Spider-Man%20Far%20from%20Home%202019/Spider-Man%20Far%20from%20Home%202019%201080p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/Spider-Man%20Far%20from%20Home%202019/Spider-Man%20Far%20from%20Home%202019%20480p.mp4', 'سبايدر مان نسخة جديدة الجزء الثاني')">
+            <img src="https://s01.babup.com/uploads/disney-plus-spider-man.jpg" alt="Thumbnail">
+            <div class="details">
+                <div class="title"> Spider Man Far from Home 2019   </div>
+                <div class="channel">مترجم  بالعربي</div>
+                <div class="year">|  الجزء الثاني</div>
+            </div>
+        </div>
+
+
+
+ <div class="suggested-video" onclick="showQualityOptions('https://pullzonetaher.b-cdn.net/Movies/Spider-Man%20No%20Way%20Home/Spider-Man%20No%20Way%20Home%20720p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/Spider-Man%20No%20Way%20Home/Spider-Man%20No%20Way%20Home%201080p.mp4', 'https://pullzonetaher.b-cdn.net/Movies/Spider-Man%20No%20Way%20Home/Spider-Man%20No%20Way%20Home%20480p.mp4', 'سبايدر مان نسخة جديدة الجزء الثالث')">
+            <img src="https://s01.babup.com/uploads/hq720-2-_35c82.jpg" alt="Thumbnail">
+            <div class="details">
+                <div class="title"> Spider Man no way Home 2021 </div>
+                <div class="channel">مترجم  بالعربي</div>
+                <div class="year">|  الجزء الثالث</div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
 
     </div>
-    <script src="script.js"></script>
-     <script>
+</div>
 
-      function checkInternetConnection() {
+<!-- نافذة اختيار الجودة -->
+<div class="quality-popup" id="quality-popup">
+    <h3>حدد جودة الفيلم</h3>
+    <div class="quality-option" onclick="playVideo('medium')">متوسطة</div>
+    <div class="quality-option" onclick="playVideo('high')">عالية</div>
+    <div class="quality-option" onclick="playVideo('low')">منخفضة</div>
+</div>
 
-    if (!navigator.onLine) {
-        document.body.classList.add('offline');
-        document.body.innerHTML = '<p> ليس لديك اتصال إنترنت</p>';
-        document.body.style.backgroundColor = 'black';
-        document.body.style.color = 'white';
-        document.body.style.display = 'flex';
-        document.body.style.justifyContent = 'center';
-        document.body.style.alignItems = 'center';
-        document.body.style.height = '100vh';
-        document.body.style.margin = '0';
-        document.body.style.fontSize = '24px';
+<!-- نافذة خيارات التحكم -->
+<div class="controls-popup" id="controls-popup">
+    <h3>خيارات التحكم</h3>
+    <div class="control-option" onclick="toggleFullScreen()">توسيع الشاشة</div>
+    <div class="control-option" onclick="togglePlaybackSpeed()">تغيير سرعة التشغيل</div>
+</div>
+
+<script>
+    document.getElementById('loader-wrapper').style.display = 'none';
+    document.getElementById('main-video').style.display = 'block';
+    document.querySelector('.content').style.display = 'block';
+
+    function toggleDescription() {
+        const description = document.querySelector('.video-description');
+        description.style.display = description.style.display === 'block' ? 'none' : 'block';
     }
-}
 
-window.addEventListener('online', checkInternetConnection);
-window.addEventListener('offline', checkInternetConnection);
+    let currentVideoQuality = {
+        medium: 'video2-medium.mp4',
+        high: 'video2-high.mp4',
+        low: 'video2-low.mp4'
+    };
 
-// فحص الاتصال بشكل دوري
-setInterval(checkInternetConnection, 3000);
+    function showQualityOptions(medium, high, low, title) {
+        currentVideoQuality = { medium, high, low };
+        const video = document.getElementById('video');
+        video.src = medium; // تعيين الجودة المتوسطة كبداية
+        document.getElementById('fixed-year').innerText = "Powered by Fans Home "; // تحديث السنة
+        document.querySelector('.video-title').innerText = title; // تحديث العنوان
+        document.getElementById('quality-popup').style.display = 'block'; // إظهار نافذة الجودة
+    }
 
-    </script>
-    <script>
-      const modal = document.querySelector(".modal");
-const loginButton = document.querySelector(".login-btn");
-const closeButton = document.querySelector(".close");
+    function playVideo(quality) {
+        const video = document.getElementById('video');
+        video.src = currentVideoQuality[quality]; // تعيين مصدر الفيديو بناءً على الجودة المختارة
+        video.play();
+        document.getElementById('quality-popup').style.display = 'none'; // إخفاء نافذة الجودة
+    }
 
-const openModal = () => (modal.style.display = "block");
-const closeModal = () => (modal.style.display = "none");
-const outsideClick = (e) => {
-  if (e.target == modal) {
-    closeModal();
-  }
-};
+    // خيارات التحكم
+    function toggleFullScreen() {
+        const video = document.getElementById('video');
+        if (video.requestFullscreen) {
+            video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) { // Safari
+            video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) { // IE11
+            video.msRequestFullscreen();
+        }
+        document.getElementById('controls-popup').style.display = 'none'; // إخفاء نافذة التحكم
+    }
 
-loginButton.addEventListener("click", openModal);
-closeButton.addEventListener("click", closeModal);
-window.addEventListener("click", outsideClick);
-    </script>
-  </body>
+    function togglePlaybackSpeed() {
+        const video = document.getElementById('video');
+        video.playbackRate = video.playbackRate === 1 ? 1.5 : 1; // تغيير السرعة بين 1 و 1.5
+        document.getElementById('controls-popup').style.display = 'none'; // إخفاء نافذة التحكم
+    }
+
+    // إظهار خيارات التحكم عند النقر على المشغل
+    document.getElementById('video').addEventListener('click', function() {
+        document.getElementById('controls-popup').style.display = 'block'; // إظهار خيارات التحكم
+    });
+</script>
+
+</body>
 </html>
